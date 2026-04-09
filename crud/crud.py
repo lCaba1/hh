@@ -34,8 +34,8 @@ def get_owners(db: Session):
 
 def get_owner(db: Session, owner_id: int):
     owner = db.query(Owner).filter(Owner.id == owner_id).first()
-    #if not owner:
-    #    raise OwnerNotFoundException(f"Владелец с ID {owner_id} не найден")
+    if not owner:
+        raise OwnerNotFoundException(f"Владелец с ID {owner_id} не найден")
     return owner
 
 
