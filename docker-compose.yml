@@ -10,7 +10,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./hh_sql.sql:/docker-entrypoint-initdb.d/hh_sql.sql
+      #- ./hh_sql.sql:/docker-entrypoint-initdb.d/hh_sql.sql
       - pgdata:/var/lib/postgresql/data
 
   backend:
