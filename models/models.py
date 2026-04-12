@@ -68,9 +68,3 @@ class RaceResult(Base):
     horse = relationship("Horse", back_populates="race_results")
     jockey = relationship("Jockey", back_populates="race_results")
 
-
-class Test(Base):
-    __tablename__ = "test"
-
-    id = Column(Integer, primary_key=True, index=True)
-
