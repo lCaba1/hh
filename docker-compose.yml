@@ -32,7 +32,7 @@ services:
       POSTGRES_DB: hobbyhorsing
       POSTGRES_PORT: 5432
     volumes:
-      - /hh_sql.sql:/docker-entrypoint-initdb.d/hh_sql.sql
+      - ./hh_sql.sql:/docker-entrypoint-initdb.d/hh_sql.sql:ro
 
 volumes:
   pgdata:
